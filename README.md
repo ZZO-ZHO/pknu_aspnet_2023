@@ -26,3 +26,8 @@ Bootstrap 클로닝
 
 핀터레스트스타일 페이지 클로닝  
 <img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day03/images/pinterest.gif?raw=true" width="700">
+
+## 4일차
+- ASP.NET MVC
+	- ASP.NET 기본
+	- ASP.NET 프로젝트
