@@ -31,3 +31,6 @@ Bootstrap 클로닝
 - ASP.NET MVC
 	- ASP.NET 기본
 	- ASP.NET 프로젝트
+
+ASP.NET Core MVC 게시판
+<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day04/images/aspnet.png?raw=true" width="700">
