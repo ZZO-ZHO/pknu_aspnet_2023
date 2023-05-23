@@ -34,3 +34,9 @@ Bootstrap 클로닝
 
 ASP.NET Core MVC 게시판
 <img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day04/images/aspnet.png?raw=true" width="700">
+
+## 5일차
+- ASP.NET MVC
+	- 게시판 계속
+	
+<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day05/images/net.gif?raw=true" width="700">
