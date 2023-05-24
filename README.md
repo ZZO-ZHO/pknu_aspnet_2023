@@ -40,3 +40,10 @@ ASP.NET Core MVC 게시판
 	- 게시판 계속
 	
 <img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day05/images/net.gif?raw=true" width="700">
+
+## 6일차
+- ASP.NET MVC
+	- 게시판 정리
+	- 계정관리 (회원가입, 로그인)
+
+<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day06/img/net.gif?raw=true" width="700">
