@@ -19,13 +19,15 @@ ASP.NET 학습 리포지토리
 ## 3일차
 - 웹 기본
 	- Bootstrap 예제클로닝
-	- 핀터레스트스타일페이지 클로닝
+	- 핀터레스트스타일 페이지 클로닝
 	
-Bootstrap 클로닝  
-<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day03/images/boot.gif?raw=true" width="700">
+Bootstrap 앨범사이트 클로닝
 
-핀터레스트스타일 페이지 클로닝  
-<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day03/images/pinterest.gif?raw=true" width="700">
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/aspnet01.gif" width="700">
+
+핀터레스트스타일 페이지 클로닝
+
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/aspnet02.gif" width="700">
 
 ## 4일차
 - ASP.NET MVC
@@ -33,17 +35,30 @@ Bootstrap 클로닝
 	- ASP.NET 프로젝트
 
 ASP.NET Core MVC 게시판
-<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day04/images/aspnet.png?raw=true" width="700">
+
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/aspnet03.png" width="700">
 
 ## 5일차
 - ASP.NET MVC
-	- 게시판 계속
+	- 게시판 페이징까지
 	
-<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day05/images/net.gif?raw=true" width="700">
-
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/aspnet04.gif" width="700">
+	
 ## 6일차
 - ASP.NET MVC
 	- 게시판 정리
-	- 계정관리 (회원가입, 로그인)
+	- 계정관리(회원가입, 로그인)
+	
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/aspnet05.gif" width="700">
 
-<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Day06/img/net.gif?raw=true" width="700">
+## 7일차
+- ASP.NET Core MVC
+	- 게시판 정리 (아이디삭제, 번호표시)
+	- 권한관리
+	
+## 8일차
+- ASP.NET Core MVC
+	- 부트스트랩 테마적용(SEO Dream)적용
+	
+- APS.NET RestAPI
+- 개인포트폴리오

@@ -45,7 +45,6 @@ namespace aspnet02_boardapp.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("UserName")
-                        .IsRequired()
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");

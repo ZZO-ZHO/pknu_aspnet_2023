@@ -5,7 +5,7 @@ namespace aspnet02_boardapp
 {
     public class Program
     {
-        // ASP.NET 실행을 위한 구성 초기화
+        // ASP.NET 실행을 위한 구성초기화
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -16,9 +16,9 @@ namespace aspnet02_boardapp
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
                 // appsettings.json ConnectionStrings내의 연결문자열 할당
                 builder.Configuration.GetConnectionString("DefaultConnection"),
-                // 연결문자열로 DB의 서버 버전을 자동으로 가져올 것
+                // 연결문자열로 DB의 서버 버전을 자동으로 가져올것
                 ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
-                ));
+            ));
 
             var app = builder.Build();
 
