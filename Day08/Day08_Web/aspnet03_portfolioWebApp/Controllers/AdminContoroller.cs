@@ -18,6 +18,7 @@ namespace aspnet02_boardapp.Controllers
         [HttpGet]
         public IActionResult CreateRole()
         {
+            ViewData["NoScroll"] = "true";
             return View();
         }
 

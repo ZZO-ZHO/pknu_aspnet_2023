@@ -70,3 +70,19 @@ ASP.NET Core MVC 게시판
 	
 - APS.NET RestAPI
 - 개인포트폴리오
+
+## 9일차
+- ASP.NET Core MVC
+	- SER Dream 테마 완료
+		- 스트롤이 되는 화면, 안되는 화면 메뉴 분리
+		- 포트폴리오 동적관리(이미지 업로드)
+		- IIS .net6.0 런타임 설치
+	- 다른 Bootstrap 테마 적용
+	
+## 10일차
+- ASP.NET RestAPI
+	- OpenAPL같은 서비스 운영
+	- RestAPI Server
+	- WPF Client
+- 개인 포트폴리오 웹
+	- 부트스트랩 테마 재적용

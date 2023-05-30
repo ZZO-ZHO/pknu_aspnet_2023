@@ -54,13 +54,14 @@
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active nanum-bold">홈</a></li>
+                            @if (ViewData["NoScroll"] != "true")
+                            {
                             <li class="scroll-to-section"><a href="#features" class="nanum-bold">스킬</a></li>
                             <li class="scroll-to-section"><a href="#about" class="nanum-bold" >소개</a></li>
                             <li class="scroll-to-section"><a href="#portfolio" class="nanum-bold">포트폴리오</a></li>
-                            <li class="scroll-to-section"><a href="#contact" class="nanum-bold">문의하기</a></li>
+                            <li class="scroll-to-section"><a href="#contact" class="nanum-bold">문의하기</a></li>    
+                            }
                             <li class="scroll-to-section"><a asp-action="Index" asp-controller="Board" class="nanum-bold">공지사항</a></li>
-                            <li class="scroll-to-section"><a href="#contact" class="nanum-bold">계정관리</a></li>
-
                             @*<li class="scroll-to-section"><div class="main-blue-button" ><a href="#contact">Get Your Quote</a></div></li>*@
                             @if (signInManager.IsSignedIn(User))
                             {
@@ -68,6 +69,9 @@
                                 {
                                     <li class="scroll-to-section">
                                         <a asp-controller="Admin" asp-action="ListRoles">권한관리</a>
+                                    </li>
+                                    <li class="scroll-to-section">
+                                        <a asp-controller="Protfolio" asp-action="Index" mrthod="post">포폴관리</a>
                                     </li>
                                 }
                                 <li class="scroll-to-section">

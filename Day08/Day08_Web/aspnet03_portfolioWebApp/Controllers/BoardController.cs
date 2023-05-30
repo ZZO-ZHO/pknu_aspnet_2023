@@ -59,6 +59,8 @@ namespace aspnet02_boardapp.Controllers
 
         public IActionResult Create()  // 게시판 글쓰기
         {
+            ViewData["NoScroll"] = "true";
+
             return View();
         }
 
@@ -88,6 +90,8 @@ namespace aspnet02_boardapp.Controllers
         [HttpGet]
         public IActionResult Edit(int? Id) 
         {
+            ViewData["NoScroll"] = "true";
+
             if (Id == null || Id == 0)
             {
                 return NotFound();  // Error.cshtml이 표시
@@ -107,6 +111,8 @@ namespace aspnet02_boardapp.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Board board)
         {
+            ViewData["NoScroll"] = "true";
+
             board.PostDate = DateTime.Now;  // 날짜를 다시
             _db.Boards.Update(board);  // UPDATE query 실행
             _db.SaveChanges();  // COMMIT
@@ -120,6 +126,8 @@ namespace aspnet02_boardapp.Controllers
         [HttpGet]
         public IActionResult Delete(int? Id)
         {
+            ViewData["NoScroll"] = "true";
+
             // HttpGet Edit Action의 로직과 완전 동일
             if (Id == null || Id == 0)
             {
@@ -157,6 +165,8 @@ namespace aspnet02_boardapp.Controllers
         [HttpGet]
         public IActionResult Details(int? Id) 
         {
+            ViewData["NoScroll"] = "true";
+
             if (Id == null || Id == 0)
             {
                 return NotFound();  // Error.cshtml이 표시
