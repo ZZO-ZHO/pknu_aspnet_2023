@@ -8,6 +8,7 @@ namespace TodoApiServer
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddCors();
 
             // Add services to the container.
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(
@@ -30,9 +31,9 @@ namespace TodoApiServer
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
 
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.MapControllers();
 
