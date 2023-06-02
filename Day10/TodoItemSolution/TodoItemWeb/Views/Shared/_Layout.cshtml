@@ -10,15 +10,20 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script>
         $(document).ready(()=>{
-            $.getJSON("https://localhost:7142/api/TodoItems/", function (data) {
-                $.each(data, function(key, val){
-                    // 텍스트출력을 위해 형식변환
-                    var str = val.id + ' / ' + val.todoDate + ' / ' + val.title + ' / ' + val.isComplete;
-
-                    $('<li/>',{text: str}).appendTo('#todoItems');
+            var getData = function () {
+                $('#todoItems').children().remove();
+                $.getJSON("https://localhost:7142/api/TodoItems/", function (data) {
+                    //요청 성공시 'data' 변수에 제품들의 목록이 담김
+                    $.each(data, function (key, val) {
+                        //텍스트 출력을 위해 형식 변경
+                        var str = val.id + ': ' + val.todoDate + ': ' + val.title + ': ' + val.isComplete;
+                        //todoItems에 대한 목록 항목 추가
+                        $('<li/>', { text: str }).appendTo($('#todoItems'));
+                    });
                 });
-            });
+            }
 
+            getData();
             // ID로 조회
             $('#btnSearch').click(function() {
                 var id = $('#Id').val();
@@ -43,31 +48,58 @@
             $('#btnInsert').click(function(event){
                 event.preventDefault(); // 폼제출방지(예방차원)
                 
+                var curDate = new Date();
+                var dateStr = curDate.getFullYear() + '-' +
+                    ('0' + (curDate.getMonth() + 1)).slice(-2) + '-' +
+                    ('0' + curDate.getDate()).slice(-2) + ' ' +
+                    ('0' + curDate.getHours()).slice(-2) + ':' +
+                    ('0' + curDate.getMinutes()).slice(-2) + ':' +
+                    ('0' + curDate.getSeconds()).slice(-2);
+
                 var data = {
                     "id": 0,
                     "title": $('#Title').val(),
-                    "todoDate": "2023-06-01T02:48:58.940Z",
+                    "todoDate": dateStr,
                     "isComplete": $('#IsComplete option:selected').val()
+
                 };
-
-                console.log(data);
                 $.ajax('https://localhost:7142/api/TodoItems/', {
-                    type: 'POST', // DB insert
-                    data: JSON.string(data),
-                    contextType: 'application/json',
-                    success:(data) => {
-                        if (typeof(data) == 'object'){
+                    type: "POST",// DB INSERT
+                    data: JSON.stringify(data),//json data로 변환
+                    contentType: "application/json",
+                    success: (data) => {
+                        if (typeof (data) == "object") {
                             data = JSON.stringify(data);
-                    }
+                        }
+                        var d = JSON.parse(data);
+                        var id = d["id"];//DB 입력 후 생성된 id
+                        if (id != 0) {
+                            $("#result").text("한건 추가되었습니다.");
+                        }
 
-                    var d = JSON.parse(data);
-                    var id = d['id'];
-                    if (id != 0 ){
-                        $('#result').text('한건 추가되었습니다.');
+                        getData();
+                    },
+                    error: function (request, status, error) {
+                        console.log(error);
+                        $("#result").text(error);
                     }
-                }
             });
         });
+
+            $('#btnDelete').click(function () {
+                var Id = $('#Id').val();
+
+                $.ajax({
+                    url: "https://localhost:7142/api/TodoItems/" + Id,
+                    type:"DELETE",
+                    dataType:"text",
+                    success:(data) =>{
+                        $('#todoItem').val(data);
+
+                        getData();
+                    }
+                });
+            });
     });
     </script>
 </head>
