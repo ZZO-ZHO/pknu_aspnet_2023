@@ -96,3 +96,11 @@ ASP.NET Core MVC 게시판
 - ASP.NET RestAPI
 	- RestAPI Server 체크
 	- FrontEnd Server 작업 계속
+	
+## 13일차
+- ASP.NET RestAPI
+	- WPF 앱 연동
+
+RestAPI사용 WPF App 및 Web 화면
+
+<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/restapi.gif" width="700">
