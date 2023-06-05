@@ -87,7 +87,7 @@ ASP.NET Core MVC 게시판
 - 개인 포트폴리오 웹
 	- 부트스트랩 테마 재적용
 	
-<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/port.gif" width="700">
+<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/Portfolio/img/port.gif" width="700">
 	
 ## 11일차
 - ASP.NET RestAPI
