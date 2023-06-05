@@ -105,4 +105,4 @@ ASP.NET Core MVC 게시판
 
 RestAPI사용 WPF App 및 Web 화면
 
-<img src="https://raw.githubusercontent.com/zzo-zho/pknu_aspnet_2023/main/images/restapi.gif" width="700">
+<img src="https://github.com/ZZO-ZHO/pknu_aspnet_2023/blob/main/images/restapi.png" width="700">
